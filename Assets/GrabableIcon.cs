@@ -9,6 +9,8 @@ public class GrabableIcon : MonoBehaviour
     public Transform palete;
     public OVRGrabbable grabbable;
 
+    private Vector3 origSize;
+
     private Pose startPose;
 
     private void Awake()
@@ -17,6 +19,8 @@ public class GrabableIcon : MonoBehaviour
         grabbable.OnGrabEnd += Grabbable_OnGrabEnd;
 
         startPose = new Pose(transform.localPosition, transform.localRotation);
+
+        origSize = transform.localScale;
     }
 
     private void Grabbable_OnGrabEnd()
@@ -28,10 +32,14 @@ public class GrabableIcon : MonoBehaviour
         newInst.transform.localScale = transform.lossyScale;
         LeanTween.scale(newInst, iconPrefab.transform.lossyScale, 1f).setEaseOutQuad();
 
+        newInst.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+
         // Reset Position
         transform.parent = palete;
         transform.localPosition = startPose.position;
         transform.localRotation = startPose.rotation;
+        transform.localScale = origSize;
     }
 
     private void Grabbable_OnGrabBegin()
