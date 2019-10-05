@@ -79,8 +79,14 @@ Shader "Custom/ToyCubeOutline"
 			}
 			ENDCG
 		}
-		// Standard forward render.
-		UsePass "Standard/FORWARD"
+        
+        Pass
+ 
+        {
+            Tags {"Queue" = "Geometry-1" }
+            ZWrite Off
+            ColorMask 0    
+        }
 	}
 	
 	Fallback Off
