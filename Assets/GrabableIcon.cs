@@ -13,6 +13,8 @@ public class GrabableIcon : MonoBehaviour
 
     private Pose startPose;
 
+    public bool changeScale = true;
+
     private void Awake()
     {
         grabbable.OnGrabBegin += Grabbable_OnGrabBegin;
@@ -29,8 +31,11 @@ public class GrabableIcon : MonoBehaviour
         newInst.transform.position = transform.position;
         newInst.transform.rotation = transform.rotation;
 
-        newInst.transform.localScale = transform.lossyScale;
-        LeanTween.scale(newInst, iconPrefab.transform.lossyScale, 1f).setEaseOutQuad();
+        if (changeScale)
+        {
+            newInst.transform.localScale = transform.lossyScale;
+            LeanTween.scale(newInst, iconPrefab.transform.lossyScale, 1f).setEaseOutQuad();
+        }
 
         newInst.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;
         GetComponent<Rigidbody>().velocity = Vector3.zero;
