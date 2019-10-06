@@ -1007,6 +1007,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6137738439674388057}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &462097030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462097029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3640c4a80bae3480cadff5181dfe73fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &462388505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6137738439296164672, guid: 8d96d5596f4c545268e1f7cc84bc2cf8,
@@ -5703,103 +5715,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2451844990649524534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 360a38c11d75bf24991bdc7b1fcddb56, type: 3}
+  m_Script: {fileID: 11500000, guid: 3640c4a80bae3480cadff5181dfe73fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttractorSettings:
-    AttractorObject: {fileID: 462388505}
-    AttractorMass: 10
-    GravityConstant: 0.01
-  VelocityHandle: {fileID: 478208004}
-  VelocityHandleLenghtScale: 0
-  TimeScale: 1
-  OrbitData:
-    GravConst: 0.009999999776482582
-    EclipticNormal:
-      x: 0
-      y: 0
-      z: 1
-    EclipticUp:
-      x: 0
-      y: 1
-      z: 0
-    EclipticRight:
-      x: 1
-      y: 0
-      z: 0
-    Position:
-      x: 1.309999942779541
-      y: 0.050999999046325684
-      z: -0.009999990463256836
-    AttractorDistance: 1.311030453419901
-    AttractorMass: 10
-    Velocity:
-      x: 0
-      y: 0
-      z: 0.2295721173286438
-    MG: 0.09999999776482582
-    SemiMinorAxis: 0.95246436614931
-    SemiMajorAxis: 1.0015183076052419
-    FocalParameter: 0.9058130659172973
-    Eccentricity: 0.3091280511089726
-    EnergyTotal: -0.09984839718401012
-    Period: 19.914445208907896
-    TrueAnomaly: 3.1586419785709263
-    MeanAnomaly: 3.172315593728698
-    EccentricAnomaly: 3.1650614090477838
-    SquaresConstant: 0
-    Periapsis:
-      x: -0.6911866426779651
-      y: -0.02690879363140672
-      z: 0.017072803515052297
-    PeriapsisDistance: 0.6919209050252769
-    Apoapsis:
-      x: 1.309724361995022
-      y: 0.05098927032849243
-      z: -0.03235112675873343
-    ApoapsisDistance: 1.311115710185207
-    CenterPoint:
-      x: 0.30926885965852846
-      y: 0.012040238348542858
-      z: -0.007639161621840567
-    OrbitCompressionRatio: 0.9044398480175684
-    OrbitNormal:
-      x: 0.038901829143356985
-      y: -0.9992430373484227
-      z: 0
-    SemiMinorAxisBasis:
-      x: 0.024655823977179095
-      y: 0.0009598832475171509
-      z: 0.9996955381355652
-    SemiMajorAxisBasis:
-      x: -0.9989388059502481
-      y: -0.03888998501992608
-      z: 0.02467450165337699
-    OrbitNormalDotEclipticNormal: 0
-  LockOrbitEditing: 0
---- !u!114 &2451844990649524536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2451844990649524534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6830bec90f469e45947a153a51aa976, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OrbitPointsCount: 50
-  MaxOrbitWorldUnitsDistance: 1000
-  LineRendererReference: {fileID: 209769977}
-  ShowOrbitGizmoInEditor: 1
-  ShowOrbitGizmoWhileInPlayMode: 1
-  ShowVelocityGizmoInEditor: 1
-  ShowPeriapsisApoapsisGizmosInEditor: 1
-  ShowAscendingNodeIneditor: 1
-  ShowAxisGizmosInEditor: 0
-  GizmosAlphaMain: 1
-  GizmosAlphaSecondary: 0.3
 --- !u!1001 &6137738439674388057
 PrefabInstance:
   m_ObjectHideFlags: 0
