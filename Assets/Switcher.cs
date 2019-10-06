@@ -17,6 +17,8 @@ public class Switcher : MonoBehaviour
     public bool isOn;
     public float dif = 0.1f;
 
+    public LineRenderer LineRenderer;
+
     private void Awake()
     {
         comfortLevel = handler.position;
@@ -33,6 +35,16 @@ public class Switcher : MonoBehaviour
 
             yield return new WaitUntil(() => (Vector3.Distance(comfortLevel, handler.position) < dif));
         }
+    }
+
+    private void Update()
+    {
+        LineRenderer.positionCount = 2;
+        LineRenderer.SetPositions(new Vector3[]
+        {
+            transform.position,
+            handler.position
+        });
     }
 
     private void Activate()
