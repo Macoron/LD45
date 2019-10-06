@@ -6,7 +6,7 @@ public class PauseSystem : MonoBehaviour
 {
     public Switcher switcher;
 
-    private bool isPause = false;
+    public static bool isPause = false;
 
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class PauseSystem : MonoBehaviour
 
     public void SetPause(bool isPause)
     {
-        this.isPause = isPause;
+        PauseSystem.isPause = isPause;
 
         var rigidBodies = FindObjectsOfType<RigidBodyPause>();
         foreach (var rb in rigidBodies)

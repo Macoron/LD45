@@ -40,6 +40,10 @@ public class Attractor : MonoBehaviour
 
     void Attract(Attractor objToAttract)
     {
+        var pause = GetComponent<RigidBodyPause>();
+        if (pause != null && pause.isPause)
+            return;
+
         Rigidbody rbToAttract = objToAttract.rb;
 
         Vector3 direction = rb.position - rbToAttract.position;
