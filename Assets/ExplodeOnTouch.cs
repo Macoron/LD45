@@ -19,6 +19,6 @@ public class ExplodeOnTouch : MonoBehaviour
         var boomFX = Instantiate(explosionPrefab);
         boomFX.transform.SetPositionAndRotation(transform.position, transform.rotation);
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
